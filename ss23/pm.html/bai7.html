@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function isPerfectNumber(number) {
+            if (number <= 0) {
+            return false;
+        }
+        let sum = 0;
+        for (let i = 1; i < number; i++) {
+            if (number % i === 0) {
+                sum += i;
+            }
+        }
+        return sum === number;
+        }
+        function main() {
+            const userNumber = parseInt(prompt("Nhập một số:"));
+            if (isPerfectNumber(userNumber)) {
+                console.log(`${userNumber} là số hoàn hảo.`);
+            } else {
+                console.log(`${userNumber} không phải là số hoàn hảo.`);
+            }
+        }
+        main();
+    </script>
+</body>
+</html>

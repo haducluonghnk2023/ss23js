@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function main() {
+        const random_number = Math.floor(Math.random() * 10) + 1;
+        while (true) {
+            const user_guess = parseInt(prompt("Nhập một số từ 1 đến 10:"));
+            if (user_guess < 1 || user_guess > 10 ) {
+                alert("Vui lòng nhập một số hợp lệ từ 1 đến 10.");
+            } else if (user_guess < random_number) {
+                alert("Số bạn nhập nhỏ hơn số ngẫu nhiên.");
+            } else if (user_guess > random_number) {
+                alert("Số bạn nhập lớn hơn số ngẫu nhiên.");
+            } else {
+                alert("Chúc mừng! Bạn đã đoán đúng.");
+                break;
+            }
+            console.log(random_number);
+        }
+    }   
+    main();
+    </script>
+</body>
+</html>
