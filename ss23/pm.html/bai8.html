@@ -11,16 +11,13 @@
         if (number < 2) {
             return false;
         }
-
         for (let i = 2; i <= Math.sqrt(number); i++) {
             if (number % i === 0) {
                 return false;
             }
         }
-
-        return true;
+            return true;
         }
-
         function printPrimesLessThanN(n) {
             console.log(`Các số nguyên tố nhỏ hơn ${n}:`);
             for (let i = 2; i < n; i++) {
@@ -29,7 +26,6 @@
                 }
             }
         }
-
         function main() {
             const userNumber = parseInt(prompt("Nhập một số nguyên dương:"));
             if (userNumber <= 0 || isNaN(userNumber)) {
